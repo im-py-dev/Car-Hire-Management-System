@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Vehicles</title>
+  </head>
+  <body>
+    <h1>All Vehicles</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Model</th>
+          <th>Category</th>
+          <th>Daily Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for vehicle in vehicles %}
+        <tr>
+          <td>{{ vehicle.id }}</td>
+          <td>{{ vehicle.model }}</td>
+          <td>{{ vehicle.category }}</td>
+          <td>{{ vehicle.daily_rate }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Create Booking - {{vehicle.model}}</h1>
+  <h1>Cost per day - {{vehicle.daily_rate}}</h1>
+  <h2>From - {{start_date}}</h2>
+  <h2>To - {{end_date}}</h2>
+  <form method="POST">
+    <button type="submit" class="btn btn-primary">Create Booking</button>
+  </form>
+{% endblock %}

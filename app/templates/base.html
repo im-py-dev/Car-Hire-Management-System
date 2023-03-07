@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+
+{% if error %}
+    <span style="color:red">{{error}}</span>
+{% endif %}
+
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/signup">SignUp</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="/customers">customers</a></li>
+        <li><a href="/vehicles">vehicles</a></li>
+        <li><a href="/availability">availability</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+  </body>
+</html>

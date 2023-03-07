@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Availability</title>
+</head>
+<body>
+    <h1>Vehicle Availability</h1>
+    <form method="POST" action="/availability">
+        <div>
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required>
+        </div>
+        <div>
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required>
+        </div>
+        <button type="submit">Check Availability</button>
+    </form>
+    {% if vehicles %}
+        <h2>Available Vehicles</h2>
+        <ul>
+        {% for vehicle in vehicles %}
+            <li>{{ vehicle.model }}
+            <a href="{{ url_for('create_booking', vehicle_id=vehicle.id, start_date='2023-03-10', end_date='2023-03-15') }}">Book now</a>
+<!--            <a href="{{ url_for('create_booking', vehicle_id=vehicle.id) }}">Book now</a>-->
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% if error %}
+    <span style="color:red">{{error}}</span>
+{% endif %}
+</body>
+</html>

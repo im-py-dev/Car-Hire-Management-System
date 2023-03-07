@@ -12,6 +12,7 @@ from flask_login import LoginManager
 from flask_bcrypt import Bcrypt
 # from flask_migrate import Migrate
 import mysql.connector
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
@@ -26,19 +27,20 @@ else:
 
 # Database configuration
 db_config = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': os.getenv('SQL_PASSWORD'),
-    'database': 'car_hire'
+    'host': os.getenv('DB_HOST'),
+    'user': os.getenv('DB_USER'),
+    'password': os.getenv('DB_PASS'),
+    'database': os.getenv('DB_NAME')
 }
 
 # Create a connection to the database
 conn = mysql.connector.connect(**db_config)
+db = SQLAlchemy(app)
 
-# bcrypt = Bcrypt(app)
-# login_manager = LoginManager()
-# login_manager.init_app(app)
-# login_manager.login_view = 'login'
+bcrypt = Bcrypt(app)
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
 
-# from app.views.admin import base, payments, translations, languages, deposits
-# from app.views.user import base, translation
+# from app.views.admin import base
+from .views.user import base
