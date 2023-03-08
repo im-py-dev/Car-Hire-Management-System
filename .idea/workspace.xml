@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- update Comments">
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="typing update">
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +260,35 @@
       <option name="project" value="LOCAL" />
       <updated>1678296316391</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- typing update &amp; some comments">
+      <created>1678302425702</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678302425702</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- comments">
+      <created>1678302464397</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678302464397</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- update README.md">
+      <created>1678302477372</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678302477372</updated>
+    </task>
+    <task id="LOCAL-00023" summary="typing update">
+      <created>1678302486225</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678302486225</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -290,8 +316,11 @@
     <MESSAGE value="- adding dummy data" />
     <MESSAGE value="- adding is_admin()" />
     <MESSAGE value="- COMMENT" />
-    <MESSAGE value="- update README.md" />
     <MESSAGE value="- update Comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="- update Comments" />
+    <MESSAGE value="- typing update &amp; some comments" />
+    <MESSAGE value="- comments" />
+    <MESSAGE value="- update README.md" />
+    <MESSAGE value="typing update" />
+    <option name="LAST_COMMIT_MESSAGE" value="typing update" />
   </component>
 </project>

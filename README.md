@@ -154,3 +154,44 @@ WantedBy=multi-user.target
 sudo systemctl enable daily-report.service
 sudo systemctl start daily-report.service
 ```
+___
+## Optimization
+
+To improve the performance of the application, we need to optimize the database schema by adding indexes and using caching.
+Here are the changes that we need to make:
+
+1. Add an index to the `vehicles` table on the `category` column to speed up queries that filter by category.
+
+2. Add an index to the `bookings` table on the `vehicle_id` column to speed up queries that join the `bookings` and `vehicles` tables.
+
+3. Implement caching to reduce the number of queries to the database and improve response times.
+
+## Implementation
+
+#### To add the indexes, connect to the MySQL database and execute the following queries:
+
+```sql
+CREATE INDEX idx_vehicles_category ON vehicles (category);
+CREATE INDEX idx_bookings_vehicle_id ON bookings (vehicle_id);
+```
+
+#### implementation for caching
+`__init__.py`
+```python
+# Import the caching library
+from flask_caching import Cache
+
+# Create a cache object
+cache = Cache(config={'CACHE_TYPE': 'simple'})
+
+# Configure the cache
+cache.init_app(app)
+```
+`views.py`
+```python
+# Add a route that uses caching
+@app.route('/vehicles')
+@cache.cached(timeout=60)
+def view_vehicles():
+    ...
+```
