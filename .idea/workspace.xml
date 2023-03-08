@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- adding is_admin()" />
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- COMMENT">
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678256017783</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="- COMMENT">
+      <created>1678256328267</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678256328267</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +273,7 @@
     <MESSAGE value="- update README.md" />
     <MESSAGE value="- adding dummy data" />
     <MESSAGE value="- adding is_admin()" />
-    <option name="LAST_COMMIT_MESSAGE" value="- adding is_admin()" />
+    <MESSAGE value="- COMMENT" />
+    <option name="LAST_COMMIT_MESSAGE" value="- COMMENT" />
   </component>
 </project>
