@@ -5,7 +5,7 @@
   ],
   "env": {
     "PIPENV_VERCEL_PYTHON_VERSION": "3.9",
-    "FLASK_APP": "run.py",
+    "FLASK_APP": "app",
     "FLASK_ENV": "production",
     "LC_ALL": "en_US.utf-8",
     "LANG": "en_US.utf-8"
@@ -29,6 +29,6 @@
         "memory": 512
       }
     },
-    "command": "pipenv install && pipenv run python run.py"
+    "command": "pipenv lock --requirements > requirements.txt && pipenv install --deploy && pipenv run python run.py"
   }
 }

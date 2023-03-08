@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- Adding Optimization ideas">
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- Adding Vercel.json file">
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -301,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678305038484</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="- Adding Vercel.json file">
+      <created>1678311331300</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678311331300</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -335,6 +342,7 @@
     <MESSAGE value="- update README.md" />
     <MESSAGE value="typing update" />
     <MESSAGE value="- Adding Optimization ideas" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Adding Optimization ideas" />
+    <MESSAGE value="- Adding Vercel.json file" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Adding Vercel.json file" />
   </component>
 </project>
