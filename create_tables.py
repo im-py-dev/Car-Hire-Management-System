@@ -22,7 +22,8 @@ CREATE TABLE customers (
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
-    balance DECIMAL(10, 2) NOT NULL DEFAULT 0.00
+    balance DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
+    FOREIGN KEY (id) REFERENCES user(id)
 );
 '''
 cursor.execute(customer_table_query)
