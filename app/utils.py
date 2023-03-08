@@ -6,7 +6,7 @@ import concurrent.futures
 from functools import wraps
 from typing import Any
 import requests
-from flask import request, current_app
+from flask import request, current_app, abort
 from flask_login import current_user, logout_user
 from flask_login.config import EXEMPT_METHODS
 from app import app
@@ -132,3 +132,23 @@ def allowed_booking(cursor, start_date, end_date) -> list:
         if valid_booking(cursor, start_date, end_date, vehicle['id']):
             allowed_vehicles.append(vehicle)
     return allowed_vehicles
+
+
+def is_admin(func):
+    @wraps(func)
+    def decorated_view(*args, **kwargs):
+        if not current_user.is_authenticated:
+            return current_app.login_manager.unauthorized()
+
+        if not current_user.id == 1:
+        #     TODO complete it
+        # if not current_user.is_admin:
+            abort(403)
+
+        try:
+            # current_app.ensure_sync available in Flask >= 2.0
+            return current_app.ensure_sync(func)(*args, **kwargs)
+        except AttributeError:  # pragma: no cover
+            return func(*args, **kwargs)
+
+    return decorated_view

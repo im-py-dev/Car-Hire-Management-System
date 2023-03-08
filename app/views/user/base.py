@@ -156,6 +156,7 @@ def vehicle_availability():
 
 
 @app.route('/bookings/create/<int:vehicle_id>', methods=['GET', 'POST'])
+@login_required
 def create_booking(vehicle_id):
     if request.method == 'GET':
         # Retrieve vehicle information
@@ -251,6 +252,7 @@ def create_booking(vehicle_id):
 
 
 @app.route('/thankyou')
+@login_required
 def thankyou():
     return render_template('thankyou.html')
 
@@ -321,6 +323,7 @@ def logout():
 
 
 @app.route('/generate_daily_report')
+@login_required
 def generate_daily_report_route():
     # this will create report for this day until now
     filename = generate_daily_report(now=True)
