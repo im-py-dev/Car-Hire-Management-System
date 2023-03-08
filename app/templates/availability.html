@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Vehicle Availability</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+
+
+{% block content %}
     <h1>Vehicle Availability</h1>
     <form method="POST" action="/availability">
         <div>
@@ -30,5 +29,4 @@
 {% if error %}
     <span style="color:red">{{error}}</span>
 {% endif %}
-</body>
-</html>
+{% endblock %}

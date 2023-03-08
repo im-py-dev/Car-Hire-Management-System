@@ -1,0 +1,90 @@
+	.togglebutton {
+    vertical-align: middle;
+}
+
+.togglebutton, .togglebutton label, .togglebutton input, .togglebutton .toggle {
+    user-select: none;
+}
+
+.togglebutton label {
+    cursor: pointer;
+    color: currentcolor;
+    font-weight: bold;
+}
+
+.form-group.is-focused .togglebutton label {
+    color: rgba(0,0,0, 0.26);
+}
+
+.form-group.is-focused .togglebutton label:hover, .form-group.is-focused .togglebutton label:focus {
+    color: rgba(0,0,0, .54);
+}
+
+fieldset[disabled] .form-group.is-focused .togglebutton label {
+    color: rgba(0,0,0, 0.26);
+}
+
+.togglebutton label input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.togglebutton label .toggle {
+    text-align: left;
+    margin-left: 5px;
+}
+
+.togglebutton label .toggle,
+.togglebutton label input[type=checkbox][disabled] + .toggle {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    background-color: rgba(80, 80, 80, 0.7);
+    border-radius: 15px;
+    margin-right: 15px;
+    transition: background 0.3s ease;
+    vertical-align: middle;
+}
+
+.togglebutton label .toggle:after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4);
+    left: -5px;
+    top: -3px;
+    border: 1px solid rgba(0,0,0, .54);
+    transition: left 0.3s ease, background 0.3s ease, box-shadow 0.1s ease;
+}
+
+.togglebutton label input[type=checkbox][disabled] + .toggle:after,
+.togglebutton label input[type=checkbox][disabled]:checked + .toggle:after {
+    background-color: #BDBDBD;
+}
+
+.togglebutton label input[type=checkbox] + .toggle:active:after,
+.togglebutton label input[type=checkbox][disabled] + .toggle:active:after {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.togglebutton label input[type=checkbox]:checked + .toggle:after {
+    left: 15px;
+}
+
+.togglebutton label input[type=checkbox]:checked + .toggle {
+    background-color: #032a44;
+}
+
+.togglebutton label input[type=checkbox]:checked + .toggle:after {
+    border-color: #032a44;
+}
+
+.togglebutton label input[type=checkbox]:checked + .toggle:active:after {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(156, 39, 176, 0.1);
+}

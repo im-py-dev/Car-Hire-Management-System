@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>All Vehicles</title>
-  </head>
-  <body>
-    <h1>All Vehicles</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Model</th>
-          <th>Category</th>
-          <th>Daily Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for vehicle in vehicles %}
-        <tr>
-          <td>{{ vehicle.id }}</td>
-          <td>{{ vehicle.model }}</td>
-          <td>{{ vehicle.category }}</td>
-          <td>{{ vehicle.daily_rate }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </body>
-</html>
+{% extends 'base.html' %}
+{% include 'navbar.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">All Vehicles</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Model</th>
+                      <th>Category</th>
+                      <th>Daily Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for vehicle in vehicles %}
+                    <tr>
+                      <td>{{ vehicle.id }}</td>
+                      <td>{{ vehicle.model }}</td>
+                      <td>{{ vehicle.category }}</td>
+                      <td>{{ vehicle.daily_rate }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

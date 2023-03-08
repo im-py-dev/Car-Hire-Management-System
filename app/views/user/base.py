@@ -11,6 +11,10 @@ from app.models import User
 from app.utils import clean_name, load_json, user_state_icon, show_balance, valid_date, send_booking_email, \
     valid_booking, allowed_booking
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask import send_file
+from daily_report import generate_daily_report
+
+
 # Import database connection object
 
 
@@ -21,11 +25,11 @@ def load_user(user_id):
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('base.html'), 200
+    return render_template('home.html'), 200
 
 
 # Endpoint to add a new customer
-@app.route('/customers', methods=['GET', 'POST'])
+@app.route('/api/customers', methods=['GET', 'POST'])
 def add_customer():
     if request.method == 'GET':
         cursor = conn.cursor(dictionary=True)
@@ -33,7 +37,7 @@ def add_customer():
         cursor.execute(query)
         rows = cursor.fetchall()
         cursor.close()
-        return render_template('customers.html', customers=rows), 200
+        return jsonify(rows), 200
 
     elif request.method == 'POST':
         cursor = conn.cursor()
@@ -48,11 +52,11 @@ def add_customer():
 
 
 # Endpoint to update a customer
-@app.route('/customers/<int:id>', methods=['PUT'])
+@app.route('/api/customers/<int:id>', methods=['PUT'])
 def update_customer(id):
-    name = request.json['name']
-    email = request.json['email']
-    balance = request.json['balance']
+    name = request.form['name']
+    email = request.form['email']
+    balance = request.form['balance']
     cursor = conn.cursor()
     query = "UPDATE customers SET name = %s, email = %s , balance = %s WHERE id = %s"
     values = (name, email, balance, id)
@@ -63,7 +67,7 @@ def update_customer(id):
 
 
 # Endpoint to delete a customer
-@app.route('/customers/<int:id>', methods=['DELETE'])
+@app.route('/api/customers/<int:id>', methods=['DELETE'])
 def delete_customer(id):
     cursor = conn.cursor()
     query = "DELETE FROM customers WHERE id = %s"
@@ -75,23 +79,18 @@ def delete_customer(id):
 
 
 # Endpoint to get a customer by ID
-@app.route('/customers/<int:id>', methods=['GET'])
+@app.route('/api/customers/<int:id>', methods=['GET'])
 def get_customer(id):
-    cursor = conn.cursor()
+    cursor = conn.cursor(dictionary=True)
     query = "SELECT * FROM customers WHERE id = %s"
     values = (id,)
     cursor.execute(query, values)
     row = cursor.fetchone()
-    if row is None:
-        return jsonify({"message": "Customer not found"}), 404
-    customer = {
-        "id": row[0],
-        "name": row[1],
-        "email": row[2],
-        "balance": float(row[3])
-    }
     cursor.close()
-    return jsonify(customer), 200
+
+    if not row:
+        return jsonify({"message": "Customer not found"}), 404
+    return jsonify(row), 200
 
 
 @app.route('/vehicles')
@@ -181,15 +180,15 @@ def create_booking(vehicle_id):
         values = (vehicle_id,)
         cursor.execute(query, values)
         result = cursor.fetchone()
-        daily_rate = result[0]
-        model = result[1]
+        daily_rate = result['daily_rate']
+        model = result['model']
 
         # get the email from the vehicles table
         query = "SELECT email FROM customers WHERE id = %s"
         values = (customer_id,)
         cursor.execute(query, values)
         result = cursor.fetchone()
-        email = result[0]
+        email = result['email']
 
         # Calculate the amount to be paid
         delta = end_date - start_date
@@ -200,8 +199,7 @@ def create_booking(vehicle_id):
         query = "SELECT balance FROM customers WHERE id = %s"
         values = (customer_id,)
         cursor.execute(query, values)
-        result = cursor.fetchone()[0]
-        user_balance = result
+        user_balance = cursor.fetchone()['balance']
 
         # Calculate new balance after subtracting amount paid
         new_balance = user_balance - amount_paid
@@ -242,6 +240,9 @@ def thankyou():
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+
     if request.method == 'POST':
         # Get form data
         username = request.form['username']
@@ -300,3 +301,10 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+
+@app.route('/generate_daily_report')
+def generate_daily_report_route():
+    # this will create report for this day until now
+    filename = generate_daily_report(now=True)
+    return send_file(filename, as_attachment=True)

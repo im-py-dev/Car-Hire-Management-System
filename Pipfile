@@ -14,6 +14,7 @@ flask-script = "*"
 requests = "*"
 mysql = "*"
 mysql-connector-python = "*"
+schedule = "*"
 
 [dev-packages]
 
