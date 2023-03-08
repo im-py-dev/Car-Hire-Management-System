@@ -56,11 +56,11 @@ def user_state_icon(state: int):
     return '✅' if state else '❌'
 
 
-def show_balance(balance: float, places: int = 2):
+def show_balance(balance: float, places: int = 2) -> str:
     return "{0:.2f}".format(float(balance))
 
 
-def valid_date(start_date, end_date):
+def valid_date(start_date, end_date) -> bool:
     """Return True if the date range is valid"""
     # we can't rent car starting from tomorrow :)
     today = date.today()
