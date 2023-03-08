@@ -1,5 +1,25 @@
 # Car Hire Management System.
 
+## Questions
+```
+[+]  If a vehicle is available, the customer's details are recorded (if not stored already) and a new booking is made.
+
+[+] Customers must pay for the vehicle at the time of hire.
+
+[Q] the first point refers to the customer can place a booking without login
+second refers to the existing login system to the customer can pay
+so I just got confused, please explain it more
+__________________________________
+[+] If the booking has been made in advance, a confirmation letter will be sent to the customer.
+[Q] is it a confirmation email? that should be clicked so the booking got confirmed. or just email to say  "hay, here is your booking"
+__________________________________
+[+] On receiving an enquiry, employees are required to check availability of cars and vans.
+[Q] does Database should have employees users and they receive a booking, then accept it/refuse it?
+__________________________________
+[+] A report is printed at the start of each day showing the bookings for that particular day.
+[Q] is this a background task or an admin widget?
+```
+
 ## A- Requirements:
 Details: The main focus of the business is renting cars and vans, and the database is to manage the
 booking system.
