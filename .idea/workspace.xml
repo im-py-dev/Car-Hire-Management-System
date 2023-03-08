@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- Adding Optimization ideas">
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678303593154</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="- Adding Optimization ideas">
+      <created>1678305038484</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678305038484</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

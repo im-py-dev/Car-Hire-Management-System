@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/(.*)", "dest": "/run.py" }
+  ],
+  "env": {
+    "PIPENV_VERCEL_PYTHON_VERSION": "3.9",
+    "FLASK_APP": "run.py",
+    "FLASK_ENV": "production",
+    "LC_ALL": "en_US.utf-8",
+    "LANG": "en_US.utf-8"
+  },
+  "build": {
+    "env": {
+      "PIPENV_PYTHON_VERSION": "3.9"
+    },
+    "functions": {
+      "run.py": {
+        "includeFiles": [
+          "views/base.py",
+          "__init__.py",
+          "create_db.py",
+          "create_tables.py",
+          "daily_report.py",
+          "vehicles.sql",
+          "wsgi.py"
+        ],
+        "runtime": "python3.9",
+        "memory": 512
+      }
+    },
+    "command": "pipenv install && pipenv run python run.py"
+  }
+}
