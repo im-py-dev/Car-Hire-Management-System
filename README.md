@@ -85,3 +85,29 @@ In summary, using an ORM tool can be beneficial in many cases, especially for ra
 However, in some cases, direct access to the database may be preferred, especially in performance-critical applications.
 Ultimately, the decision to use an ORM tool should be made based on the specific needs and requirements of the project.
 ```
+---
+# Installation
+
+### Create `.env` file
+```
+FLASK_DEBUG=1
+HOST="0.0.0.0"
+PORT=80
+DB_USER="root"
+DB_PASS="USER_PASS"
+DB_HOST="localhost"
+DB_PORT="3306"
+DB_NAME="car_hire"
+GMAIL="YOUR_GMAIL"
+GMAIL_PASS="YOUR_PASSWORD"
+```
+### change `USER_PASS` `YOUR_GMAIL` `YOUR_PASSWORD`
+___
+### `pip install pipenv`
+### `pipenv shell`
+### `pipenv install`
+### `python run.py `
+___
+# Deployment
+## (Waitress)
+`waitress-serve --host 0.0.0.0 --port 80 --call wsgi:create_app`

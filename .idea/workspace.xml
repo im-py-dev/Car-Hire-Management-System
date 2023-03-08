@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- creating daily report&#10;- enhance templates&#10;- adding dummy data">
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- editing README.md">
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/views/admin/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/views/admin/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/create_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/run.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678248657589</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- editing README.md">
+      <created>1678250476914</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678250476914</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,6 +190,7 @@
     <MESSAGE value="Creating APIs &amp; pages" />
     <MESSAGE value="Fixing logic functions.&#10;adding thankyou template." />
     <MESSAGE value="- creating daily report&#10;- enhance templates&#10;- adding dummy data" />
-    <option name="LAST_COMMIT_MESSAGE" value="- creating daily report&#10;- enhance templates&#10;- adding dummy data" />
+    <MESSAGE value="- editing README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="- editing README.md" />
   </component>
 </project>
