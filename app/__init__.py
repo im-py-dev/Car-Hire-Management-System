@@ -38,6 +38,8 @@ conn = mysql.connector.connect(**db_config)
 
 # ORM + Login Manager is not part of the task, but I used them just to make it look like real project.
 # like how we can get payment without login, asking customer for his id XD
+# I know that we can create a login through session, cookies, and g
+# But ORM is definitely the best among them
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager()
