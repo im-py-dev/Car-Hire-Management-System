@@ -15,6 +15,7 @@ requests = "*"
 mysql = "*"
 mysql-connector-python = "*"
 schedule = "*"
+waitress = "*"
 
 [dev-packages]
 

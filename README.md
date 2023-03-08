@@ -111,3 +111,31 @@ ___
 # Deployment
 ## (Waitress)
 `waitress-serve --host 0.0.0.0 --port 80 --call wsgi:create_app`
+___
+## background task in deployment
+
+## Using process manager
+##### there are other better method but I'll use this for fast
+
+#### Create a new file `/etc/systemd/system/daily-report.service` with the following contents:
+
+```
+[Unit]
+Description=Daily report generator
+
+[Service]
+Type=simple
+WorkingDirectory=/path_to_app/
+ExecStart=/usr/bin/python /path_to_app/daily_report.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+#### Enable and start the service:
+
+```
+sudo systemctl enable daily-report.service
+sudo systemctl start daily-report.service
+```

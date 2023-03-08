@@ -1,7 +1,9 @@
 import csv
 import datetime
 import os
-from app import conn
+import time
+import schedule
+from app import conn, FLASK_DEBUG
 
 
 def generate_daily_report(now=False):
@@ -40,3 +42,12 @@ def generate_daily_report(now=False):
 
     print(f"Daily report generated: {filepath}")
     return filepath
+
+
+# Schedule the report to run every day
+schedule.every().day.at('00:01').do(generate_daily_report)
+
+if FLASK_DEBUG:
+    while True:
+        schedule.run_pending()
+        time.sleep(10)

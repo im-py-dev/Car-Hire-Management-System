@@ -9,9 +9,4 @@ port = os.getenv('PORT') or 80
 host = os.getenv('HOST') or "0.0.0.0"
 
 if __name__ == "__main__":
-    # Schedule the report to run every day
-    # TODO not tested yet
-    # schedule.every().day.at('00:01').do(generate_daily_report)
-    schedule.every().minute.do(generate_daily_report)
-
     app.run(debug=app.debug, port=port, host=host)

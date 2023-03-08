@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- editing README.md">
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- adding wsgi file (Deployment)">
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/daily_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/daily_report.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/wsgi.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678250476914</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- adding wsgi file (Deployment)">
+      <created>1678251127582</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678251127582</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- adding wsgi file (Deployment)">
+      <created>1678251177245</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678251177245</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +208,7 @@
     <MESSAGE value="Fixing logic functions.&#10;adding thankyou template." />
     <MESSAGE value="- creating daily report&#10;- enhance templates&#10;- adding dummy data" />
     <MESSAGE value="- editing README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="- editing README.md" />
+    <MESSAGE value="- adding wsgi file (Deployment)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- adding wsgi file (Deployment)" />
   </component>
 </project>
