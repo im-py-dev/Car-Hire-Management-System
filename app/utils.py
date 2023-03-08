@@ -80,7 +80,8 @@ def valid_date(start_date, end_date):
 
 def valid_booking(cursor, start_date, end_date, vehicle_id) -> bool:
     """
-    This function `valid_date` takes a start date and an end date as input and checks if the given date range is valid for renting a car. The function returns `True` if the date range is valid and `False` otherwise.
+    This function takes a start date and an end date as input and checks if the given date range is valid for renting a car.
+    The function returns `True` if the date range is valid and `False` otherwise.
 
     The function checks three conditions to determine if the date range is valid:
     1. The start date must not be earlier than the current date (we can't rent a car starting from tomorrow).
