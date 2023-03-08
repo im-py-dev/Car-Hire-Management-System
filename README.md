@@ -155,7 +155,7 @@ sudo systemctl enable daily-report.service
 sudo systemctl start daily-report.service
 ```
 ___
-## Optimization
+# Optimization
 
 To improve the performance of the application, we need to optimize the database schema by adding indexes and using caching.
 Here are the changes that we need to make:
