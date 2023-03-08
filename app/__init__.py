@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 load_dotenv()
 FLASK_DEBUG = int(os.getenv('FLASK_DEBUG'))
-print(FLASK_DEBUG)
+
 if FLASK_DEBUG:
     app.config.from_object('app.config.DevelopmentConfig')
 else:

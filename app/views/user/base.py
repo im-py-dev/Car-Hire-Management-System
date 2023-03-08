@@ -93,6 +93,24 @@ def get_customer(id):
     return jsonify(row), 200
 
 
+# Endpoint to check available of cars
+@app.route('/api/available_cars', methods=['GET'])
+def get_available_cars():
+    if request.method == 'GET':
+        cursor = conn.cursor(dictionary=True)
+        start_date = datetime.strptime(request.args.get('start_date'), '%Y-%m-%d').date()
+        end_date = datetime.strptime(request.args.get('end_date'), '%Y-%m-%d').date()
+
+        if not any((start_date, end_date)):
+            return jsonify({"message": "start_date, end_date is required"}), 400
+
+        if not valid_date(start_date, end_date):
+            return jsonify({"message": "not valid date"}), 400
+
+        allowed_vehicles = allowed_booking(cursor, start_date, end_date)
+        return jsonify(allowed_vehicles), 200
+
+
 @app.route('/vehicles')
 def view_vehicles():
     cursor = conn.cursor(dictionary=True)
@@ -118,7 +136,6 @@ def vehicle_availability():
                 'end_date': end_date_str,
                 'error': "Please enter valid date",
             }
-            print(context)
             return render_template('availability.html', **context), 200
 
         # get list of allowed booking

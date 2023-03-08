@@ -1,6 +1,7 @@
 import csv
 import datetime
 import os
+import threading
 import time
 import schedule
 from app import conn, FLASK_DEBUG
@@ -47,7 +48,12 @@ def generate_daily_report(now=False):
 # Schedule the report to run every day
 schedule.every().day.at('00:01').do(generate_daily_report)
 
-if FLASK_DEBUG:
+
+def start_loop():
     while True:
         schedule.run_pending()
         time.sleep(10)
+
+
+if FLASK_DEBUG:
+    threading.Thread(target=start_loop).start()

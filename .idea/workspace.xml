@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- update README.md" />
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- update README.md">
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/daily_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/daily_report.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678252882524</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- update README.md">
+      <created>1678253054274</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678253054274</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
