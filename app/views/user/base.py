@@ -143,6 +143,9 @@ def vehicle_availability():
         rows = allowed_booking(cursor, start_date, end_date)
         cursor.close()
 
+        # - If a vehicle is available, the customer's details are recorded (if not stored already) and a new booking is made.
+        # Record user data here
+
         context = {
             'vehicles': rows,
             'start_date': start_date_str,
