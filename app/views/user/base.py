@@ -8,7 +8,8 @@ from flask_login import login_user, logout_user, login_required, current_user, L
 from flask import render_template, redirect, url_for, request, flash, send_file, jsonify, abort
 from app import app, login_manager, conn, db
 from app.models import User
-from app.utils import clean_name, load_json, user_state_icon, show_balance, valid_date
+from app.utils import clean_name, load_json, user_state_icon, show_balance, valid_date, send_booking_email, \
+    valid_booking, allowed_booking
 from werkzeug.security import generate_password_hash, check_password_hash
 # Import database connection object
 
@@ -121,14 +122,11 @@ def vehicle_availability():
             print(context)
             return render_template('availability.html', **context), 200
 
+        # get list of allowed booking
         cursor = conn.cursor(dictionary=True)
-        query = """SELECT * FROM vehicles WHERE id NOT IN (
-                    SELECT DISTINCT(vehicle_id) FROM bookings 
-                    WHERE start_date <= %s AND end_date >= %s
-                    )"""
-        cursor.execute(query, (end_date, start_date))
-        rows = cursor.fetchall()
+        rows = allowed_booking(cursor, start_date, end_date)
         cursor.close()
+
         context = {
             'vehicles': rows,
             'start_date': start_date_str,
@@ -159,12 +157,11 @@ def create_booking(vehicle_id):
         return render_template('create_booking.html', vehicle=vehicle, start_date=start_date, end_date=end_date)
 
     elif request.method == 'POST':
+        # open conn
+        cursor = conn.cursor(dictionary=True)
         # Retrieve booking data from the form
         start_date_str = request.args.get('start_date')
         end_date_str = request.args.get('end_date')
-        # customer_name = request.form['customer_name']
-        # customer_email = request.form['customer_email']
-
         # it should be customer id, anyway it is just a task
         customer_id = current_user.id
 
@@ -175,14 +172,24 @@ def create_booking(vehicle_id):
         # Check if the booking is valid
         if not valid_date(start_date, end_date):
             return jsonify({"error": "Invalid booking period"}), 400
+        # Check if the booking is available
+        if not valid_booking(cursor, start_date, end_date, vehicle_id):
+            return jsonify({"error": "Booking is not available"}), 400
 
-        # First, get the daily_rate from the vehicles table
-        cursor = conn.cursor()
-        query = "SELECT daily_rate FROM vehicles WHERE id = %s"
+        # First, get the daily_rate, model from the vehicles table
+        query = "SELECT daily_rate, model FROM vehicles WHERE id = %s"
         values = (vehicle_id,)
         cursor.execute(query, values)
-        result = cursor.fetchone()[0]
-        daily_rate = result
+        result = cursor.fetchone()
+        daily_rate = result[0]
+        model = result[1]
+
+        # get the email from the vehicles table
+        query = "SELECT email FROM customers WHERE id = %s"
+        values = (customer_id,)
+        cursor.execute(query, values)
+        result = cursor.fetchone()
+        email = result[0]
 
         # Calculate the amount to be paid
         delta = end_date - start_date
@@ -215,9 +222,22 @@ def create_booking(vehicle_id):
         # Now we can commit the changes.
         conn.commit()
         cursor.close()
-
+        # send an email
+        send_booking_email(email, start_date_str, end_date_str, amount_paid, model)
+        context = {
+            'email': email,
+            'start_date_str': start_date_str,
+            'end_date_str': end_date_str,
+            'amount_paid': amount_paid,
+            'model': model
+        }
         # Redirect to the vehicle's page with a success message
-        return 'booking Created.'
+        return render_template('thankyou.html', **context)
+
+
+@app.route('/thankyou')
+def thankyou():
+    return render_template('thankyou.html')
 
 
 @app.route('/signup', methods=['GET', 'POST'])

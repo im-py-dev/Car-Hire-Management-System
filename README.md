@@ -14,19 +14,21 @@ vehicle is to be returned.~~
 
 ~~3. A customer cannot hire a car for longer than a week.~~
 
-4. If a vehicle is available, the customer&#39;s details are recorded (if not stored already) and a new
-booking is made.
+~~4. If a vehicle is available, the customer&#39;s details are recorded (if not stored already) and a new
+booking is made.~~
 
-5. Potential or existing customers can book a vehicle up to 7 days in advance depending on
-availability.
+~~5. Potential or existing customers can book a vehicle up to 7 days in advance depending on
+availability~~
 
-6. Customers must pay for the vehicle at the time of hire.
+~~7. Customers must pay for the vehicle at the time of hire.~~
 
 7. On receiving an enquiry, employees are required to check availability of cars and vans.
-8. An invoice is written at the time of booking for the customer.
 
-9. If the booking has been made in advance, a confirmation letter will be sent to the customer.
-10. A report is printed at the start of each day showing the bookings for that particular day.
+~~9. An invoice is written at the time of booking for the customer.~~
+
+~~9. If the booking has been made in advance, a confirmation letter will be sent to the customer.~~
+
+11. A report is printed at the start of each day showing the bookings for that particular day.
 
 B- Deliverables: (all deliverables should be placed on GIT (your personal Github account). and we may
 want to check your commits and branches.)

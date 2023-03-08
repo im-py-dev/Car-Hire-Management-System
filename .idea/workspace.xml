@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="Connecting to the database and creating tables&#10;Flask app structure">
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="Creating APIs &amp; pages">
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/templates/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/templates/availability.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/templates/availability.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/create_db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678207644173</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creating APIs &amp; pages">
+      <created>1678225885843</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678225885843</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +168,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="starting" />
     <MESSAGE value="Connecting to the database and creating tables&#10;Flask app structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connecting to the database and creating tables&#10;Flask app structure" />
+    <MESSAGE value="Creating APIs &amp; pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating APIs &amp; pages" />
   </component>
 </project>
