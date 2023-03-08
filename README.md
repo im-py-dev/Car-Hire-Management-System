@@ -117,15 +117,19 @@ DB_USER="root"
 DB_PASS="USER_PASS"
 DB_HOST="localhost"
 DB_PORT="3306"
-DB_NAME="car_hire"
+DB_NAME="MY_DATABASE"
 GMAIL="YOUR_GMAIL"
 GMAIL_PASS="YOUR_PASSWORD"
 ```
 ### change `USER_PASS` `YOUR_GMAIL` `YOUR_PASSWORD`
 ___
+MySQL `CREATE DATABASE MY_DATABASE;`
+___
 ### `pip install pipenv`
 ### `pipenv shell`
 ### `pipenv install`
+### `python create_db.py `
+### `python create_tables.py `
 ### `python run.py `
 ___
 # Deployment

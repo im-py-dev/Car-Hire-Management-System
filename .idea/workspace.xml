@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- update README.md">
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.env" afterDir="false" />
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- update query">
       <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/views/user/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/daily_report.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/daily_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +197,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678253054274</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- update navbar.html">
+      <created>1678254754015</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678254754015</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- comment">
+      <created>1678254838197</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678254838197</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- update query">
+      <created>1678254926044</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678254926044</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +241,9 @@
     <MESSAGE value="- editing README.md" />
     <MESSAGE value="- adding wsgi file (Deployment)" />
     <MESSAGE value="- update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="- update README.md" />
+    <MESSAGE value="- update navbar.html" />
+    <MESSAGE value="- comment" />
+    <MESSAGE value="- update query" />
+    <option name="LAST_COMMIT_MESSAGE" value="- update query" />
   </component>
 </project>
