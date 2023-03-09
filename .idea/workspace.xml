@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- Adding Vercel.json file">
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/app/vercel.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Car Hire Management System/app/vercel.json" afterDir="false" />
+    <list default="true" id="9ade1ef9-ff85-4981-a317-11c300f32bd6" name="Changes" comment="- Creating requirements.txt">
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/Car Hire Management System.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car Hire Management System/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +315,35 @@
       <option name="project" value="LOCAL" />
       <updated>1678311331300</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="- Adding Vercel.json file">
+      <created>1678322508441</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678322508441</updated>
+    </task>
+    <task id="LOCAL-00028" summary="- Adding Vercel.json file">
+      <created>1678323585068</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678323585068</updated>
+    </task>
+    <task id="LOCAL-00029" summary="- Creating requirements.txt">
+      <created>1678324381640</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1678324381640</updated>
+    </task>
+    <task id="LOCAL-00030" summary="- Creating requirements.txt">
+      <created>1678325523877</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1678325523877</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,6 +378,7 @@
     <MESSAGE value="typing update" />
     <MESSAGE value="- Adding Optimization ideas" />
     <MESSAGE value="- Adding Vercel.json file" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Adding Vercel.json file" />
+    <MESSAGE value="- Creating requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Creating requirements.txt" />
   </component>
 </project>
