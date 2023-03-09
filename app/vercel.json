@@ -1,7 +1,10 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "run.py", "use": "@vercel/python" }
+  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/run.py" }
+    { "src": "/(.*)", "dest": "run.py" }
   ],
   "env": {
     "PIPENV_VERCEL_PYTHON_VERSION": "3.9",
@@ -17,18 +20,18 @@
     "functions": {
       "run.py": {
         "includeFiles": [
-          "views/base.py",
-          "__init__.py",
-          "create_db.py",
-          "create_tables.py",
-          "daily_report.py",
-          "vehicles.sql",
-          "wsgi.py"
+          "app",
+          "Pipfile",
+          ".env"
         ],
         "runtime": "python3.9",
         "memory": 512
       }
     },
-    "command": "pipenv lock --requirements > requirements.txt && pipenv install --deploy && pipenv run python run.py"
+    "command": "pipenv lock --requirements > requirements.txt && pipenv install --deploy",
+    "outputDirectory": "dist",
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
+    "developmentCommand": "npm run start"
   }
 }
