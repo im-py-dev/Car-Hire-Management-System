@@ -62,7 +62,7 @@ def show_balance(balance: float, places: int = 2) -> str:
 
 def valid_date(start_date, end_date) -> bool:
     """Return True if the date range is valid"""
-    # we can't rent car starting from tomorrow :)
+    # we can't rent car starting from yesterday :)
     today = date.today()
     if start_date < today:
         return False
