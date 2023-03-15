@@ -97,21 +97,20 @@ def valid_booking(cursor, start_date, end_date, vehicle_id) -> bool:
     for booking in bookings:
         exist_start = booking['start_date']
         exist_end = booking['end_date']
-        bad_conditions = [
-            # Check if the start date is within an existing booking period
-            exist_start <= start_date < exist_end,
-            # Check if the end date is within an existing booking period
-            exist_start < end_date <= exist_end,
-            # Check if the existing booking period is within the given date range
-            start_date <= exist_start < end_date,
-            start_date < exist_end <= end_date
-        ]
-        print(bad_conditions)
-        print(f"{exist_start} <= {start_date} <= {exist_end}")
-        print(f"{exist_start} <= {end_date} <= {exist_end}")
-        print(f"{start_date} <= {exist_start} <= {end_date}")
-        print(f"{start_date} <= {exist_end} <= {end_date}")
-        if any(bad_conditions):
+        # bad_conditions = [
+        #     # Check if the start date is within an existing booking period
+        #     exist_start <= start_date < exist_end,
+        #     # Check if the end date is within an existing booking period
+        #     exist_start < end_date <= exist_end,
+        #     # Check if the existing booking period is within the given date range
+        #     start_date <= exist_start < end_date,
+        #     start_date < exist_end <= end_date
+        # ]
+        # if any(bad_conditions):
+        #     return False
+
+        # more simple and faster!
+        if (start_date <= exist_end) and (end_date > exist_start):
             return False
 
     # If none of the above conditions are met, the rental period is available
