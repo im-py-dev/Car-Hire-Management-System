@@ -28,7 +28,7 @@
         "memory": 512
       }
     },
-    "command": "pipenv lock --requirements > requirements.txt && pipenv install --deploy",
+    "command": "sudo apt-get install python3-dev default-libmysqlclient-dev build-essential && pipenv lock --requirements > requirements.txt && pipenv install --deploy",
     "outputDirectory": "dist",
     "buildCommand": "npm run build",
     "installCommand": "npm install",
